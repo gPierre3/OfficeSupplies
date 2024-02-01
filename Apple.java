@@ -1,3 +1,7 @@
+
+//*
+Java docs
+
 public class Apple
 {
     
