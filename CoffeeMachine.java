@@ -1,5 +1,5 @@
 public class CoffeeMachine {
-        private int waterTank;
+        private int WaterTank;
         private boolean CoffeeFilter;
         private int BeanHopper;
         private int MilkTank;
@@ -12,60 +12,49 @@ public class CoffeeMachine {
         
         public CoffeeMachine() 
         {
-            waterTank = 100;
+            WaterTank = 100;
             CoffeeFilter = true;
             BeanHopper = 100;
             MilkTank = 100;
-            MachineStatus = true;
+            MachineStatus = false;
             Cleanliness = true; 
-            CatArt = "/\_/\ 
-                     ( o.o )
-                      > ^ <"
+            CatArt = " /\\_/\\\n( o.o )\n > ^ <";
              
-            SmileyArt = " o    o 
-                            ∆     
-                         \______/ "
+            SmileyArt = " o    o \n                            ∆     \n                         \\______/ ";
             
-            HeartArt = " ***    ***
-                        ***** ******
-                       **************
-                        ************
-                          ********
-                            ***
-                             *   "
-                          
+            HeartArt = " ***   *** \n                        ***** ***** \n                       ************* \n                        *********** \n                         ********\n                            ***\n                             *   ";                          
         }
 
-        public String MakeCoffee(String DrinkType)
+        public void MakeCoffee(String DrinkType)
         {
             if (MachineStatus == true)
             {
-                if (waterTank > 100)
+                if (WaterTank > 100)
                 {
                     System.out.println("Machine heating up...");
                     System.out.println("Making a " + DrinkType + " for you!");
-                    WaterTank - 10;
-                    MilkTaknk - 10;
-                    BeanHopper - 10;
+                    WaterTank = WaterTank - 10;
+                    MilkTank = MilkTank - 10;
+                    BeanHopper = BeanHopper - 10;
                 }
             }
 
             else
             {
-                System.out.println("You can't make any drinks right now because the machine is off! Turn off the machine")
+                System.out.println("You can't make any drinks right now because the machine is off! Turn off the machine");
             }
         }
 
         public int getWaterTank()
         {
-            return waterTank;
+            return WaterTank;
         }
 
-        public void int fillWaterTank()
+        public void fillWaterTank()
         {
         
             System.out.println("Filling the water tank up...");
-            waterTank == 100;
+            WaterTank = 100;
             System.out.println("Water tank is full!");
         
         }
@@ -75,22 +64,22 @@ public class CoffeeMachine {
             return MilkTank;
         }
 
-        public void int fillMilkTank()
+        public void fillMilkTank()
         {
             System.out.println("Filling the milk tank up...");
-            MilkTank == 100;
+            MilkTank = 100;
             System.out.println("Milk tank is full!");
         }
 
-        public int getBeanBin
+        public int getBeanHopper()
         {
-            return BeanBin;
+            return BeanHopper;
         }
 
-        public void int fillBeanHopper()
+        public void fillBeanHopper()
         {
             System.out.println("Filling the bean hopper up...");
-            BeanHopper == 100;
+            BeanHopper = 100;
             System.out.println("Bean hopper is full!");
         }
 
@@ -99,11 +88,11 @@ public class CoffeeMachine {
             return MachineStatus;
         }
 
-        public void boolean setMachineStatus(boolean input)
+        public void setMachineStatus(boolean input)
         {
             if (MachineStatus == true && input == true)
             {
-                System.out.println("Machine is already on!")
+                System.out.println("Machine is already on!");
             }
             else if (MachineStatus == false && input == true)
             {
@@ -111,7 +100,7 @@ public class CoffeeMachine {
             }
             else if (MachineStatus == true && input == false)
             {
-                MachineStatus == false;
+                MachineStatus = false;
                 System.out.println("Turning the coffee machine off...");
             }
         }
@@ -121,11 +110,11 @@ public class CoffeeMachine {
             System.out.println("Latte art options: Heart, Cat, Smiley Face");
         }
 
-        public void String PrintDesign(String ArtOption)
+        public void PrintDesign(String ArtOption)
         {
             System.out.println("You choose: " + ArtOption + " to add to your latte");
-            System.out.prrintln("Making Design...");
-            Milktank - 2;
+            System.out.println("Making Design...");
+            MilkTank = MilkTank - 2;
             System.out.println("Finished adding art. Enjoy your drink!");
             if (ArtOption.equals("Heart"))
             {
@@ -142,4 +131,5 @@ public class CoffeeMachine {
 
 
     }
+}
 
