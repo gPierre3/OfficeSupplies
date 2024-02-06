@@ -1,23 +1,18 @@
 public class CoffeeMachine {
         private int WaterTank;
-        private boolean CoffeeFilter;
         private int BeanHopper;
         private int MilkTank;
         private boolean MachineStatus;
-        private boolean Cleanliness;
         private String CatArt;
         private String HeartArt;
         private String SmileyArt;
-        //private String DrinkType
         
         public CoffeeMachine() 
         {
             WaterTank = 100;
-            CoffeeFilter = true;
             BeanHopper = 100;
             MilkTank = 100;
             MachineStatus = false;
-            Cleanliness = true; 
             CatArt = " /\\_/\\\n( o.o )\n > ^ <";
              
             SmileyArt = " o    o \n                            ∆     \n                         \\______/ ";
@@ -29,7 +24,7 @@ public class CoffeeMachine {
         {
             if (MachineStatus == true)
             {
-                if (WaterTank > 100)
+                if (WaterTank > 10)
                 {
                     System.out.println("Machine heating up...");
                     System.out.println("Making a " + DrinkType + " for you!");
@@ -41,7 +36,7 @@ public class CoffeeMachine {
 
             else
             {
-                System.out.println("You can't make any drinks right now because the machine is off! Turn off the machine");
+                System.out.println("You can't make any drinks right now because the machine is off!");
             }
         }
 
@@ -96,7 +91,8 @@ public class CoffeeMachine {
             }
             else if (MachineStatus == false && input == true)
             {
-                System.out.println("Machine turning on!");
+                MachineStatus = true;
+                System.out.println("Machine powered on!");
             }
             else if (MachineStatus == true && input == false)
             {
@@ -112,7 +108,7 @@ public class CoffeeMachine {
 
         public void PrintDesign(String ArtOption)
         {
-            System.out.println("You choose: " + ArtOption + " to add to your latte");
+            System.out.println("You chose: " + ArtOption + "art to add to your latte");
             System.out.println("Making Design...");
             MilkTank = MilkTank - 2;
             System.out.println("Finished adding art. Enjoy your drink!");
