@@ -6,7 +6,14 @@ public class CoffeeMachine {
         private String CatArt;
         private String HeartArt;
         private String SmileyArt;
-        
+        // instance variables in here
+
+
+        /**
+          * Constructs a coffee machiine with a full water tank,
+          * milk tank, and bean hopper. The machine starts as off. 
+          * Latte art also constructed.
+          */
         public CoffeeMachine() 
         {
             WaterTank = 100;
@@ -20,6 +27,11 @@ public class CoffeeMachine {
             HeartArt = " ***   *** \n                        ***** ***** \n                       ************* \n                        *********** \n                         ********\n                            ***\n                             *   ";                          
         }
 
+        /**
+        * makes whatever drink is inputted. 
+        * Making drink uses milk, water, and beans.
+        * @param DrinkType type of drink user wants to be made
+        */  
         public void MakeCoffee(String DrinkType)
         {
             if (MachineStatus == true)
@@ -40,11 +52,18 @@ public class CoffeeMachine {
             }
         }
 
+        /**
+        * returns water left in water tank
+        * @return WaterTank amount of water out of 100 left
+        */
         public int getWaterTank()
         {
             return WaterTank;
         }
 
+        /**
+        * fills water tank back to full (100)
+        */
         public void fillWaterTank()
         {
         
@@ -54,11 +73,18 @@ public class CoffeeMachine {
         
         }
 
+        /**
+        * returns milk left in water tank
+        * @return MilkTank amount of milk out of 100 left
+        */
         public int getMilktank()
         {
             return MilkTank;
         }
 
+        /**
+        * fills milk tank back to full (100)
+        */
         public void fillMilkTank()
         {
             System.out.println("Filling the milk tank up...");
@@ -66,11 +92,18 @@ public class CoffeeMachine {
             System.out.println("Milk tank is full!");
         }
 
+        /**
+        * returns beans left in Bean hopper
+        * @return BeanHopper amount of beans out of 100 left
+        */
         public int getBeanHopper()
         {
             return BeanHopper;
         }
 
+        /**
+        * fills bean hopper back to full (100)
+        */
         public void fillBeanHopper()
         {
             System.out.println("Filling the bean hopper up...");
@@ -78,11 +111,19 @@ public class CoffeeMachine {
             System.out.println("Bean hopper is full!");
         }
 
+        /**
+         * returns machine status as a boolean
+         * @return Machiine Status either off (false) or on (true)
+         */
         public boolean getMachineStatus()
         {
             return MachineStatus;
         }
 
+        /**
+        * sets machine status based on user input
+        * @param input boolean that determines machine status
+        */  
         public void setMachineStatus(boolean input)
         {
             if (MachineStatus == true && input == true)
@@ -101,11 +142,18 @@ public class CoffeeMachine {
             }
         }
 
+        /**
+         * asks user what design they want to add to their desired drink
+         */
         public void Askdesign()
         {
             System.out.println("Latte art options: Heart, Cat, Smiley Face");
         }
 
+        /**
+         * prints out art option based on input
+         * @param ArtOption the option the user chooses for their drink's art
+         */
         public void PrintDesign(String ArtOption)
         {
             System.out.println("You chose: " + ArtOption + "art to add to your latte");
