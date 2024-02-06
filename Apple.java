@@ -1,36 +1,28 @@
-
-//*
-Java docs
-
 public class Apple
 {
-    
     private int bitesLeft;
-    
 
     public Apple()
     {
         bitesLeft = 10;
         
     }
-    public int getBitesLeft();
+    public int getBitesLeft()
         {
             return bitesLeft;
         }
     
-    public int bite(int amount)
+    public void bite()
         {
-            bitesLeft = bitesLeft - amount;
+            bitesLeft--;
 
         }
-    public int newApple()
+    public void newApple()
     {
         if(bitesLeft == 0)
         {
             bitesLeft = 10;
         }
-
-    
-
-
+        System.out.println("You got a new apple ready for biting!");
+    }
 }
