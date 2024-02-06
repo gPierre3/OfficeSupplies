@@ -1,6 +1,45 @@
 public class OfficeSuppliesTester {
     public static void main(String[] args) 
     {
+        int testsPasseddd = 0;
+        System.out.println("TESTING APPLE");
+        System.out.println();
+        System.out.println("Obtaining a new apple...");
+        Apple a = new Apple();
+        testsPasseddd++;
+        System.out.println(testsPasseddd + "/5 tests passed");
+        System.out.println();
+        
+        System.out.println("Getting bites left for apple...");
+        System.out.println(a.getBitesLeft());
+        testsPasseddd++;
+        System.out.println(testsPasseddd + "/5 tests passed");
+        System.out.println();
+
+        System.out.println("Biting apple ten times...");
+        a.bite(10);
+        testsPasseddd++;
+        System.out.println(testsPasseddd + "/5 tests passed");
+        System.out.println();
+
+        System.out.println("Getting bites left for apple...");
+        System.out.println(a.getBitesLeft());
+        testsPasseddd++;
+        System.out.println(testsPasseddd + "/5 tests passed");
+        System.out.println();
+
+        System.out.println("Getting new apple to eat...");
+        a.newApple();
+        System.out.println("It has " + a.getBitesLeft() + " bites left...");
+        testsPasseddd++;
+        System.out.println(testsPasseddd + "/5 tests passed");
+        System.out.println();
+        
+        
+    
+        
+        //Tester for Pen Class
+        System.out.println("-----------------------");
         int testsPassedd = 0;
         System.out.println("TESTING PEN");
         System.out.println();
@@ -28,7 +67,7 @@ public class OfficeSuppliesTester {
         System.out.println(testsPassedd + "/4 tests passed");
         System.out.println();
 
-
+        //Tester for CoffeeMachine class
         System.out.println("-----------------------");
         int testsPassed = 0;
         System.out.println("TESTING COFFEE MACHINE");

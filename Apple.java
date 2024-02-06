@@ -11,11 +11,10 @@ public class Apple
         {
             return bitesLeft;
         }
-    
-    public void bite()
-        {
-            bitesLeft--;
 
+    public void bite(int amount)
+        {
+            bitesLeft = bitesLeft - amount;
         }
     public void newApple()
     {
